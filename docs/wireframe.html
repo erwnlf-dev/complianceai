@@ -1,0 +1,133 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComplianceAI - OJK & UU PDP Compliance Automation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              900: '#14532d',
+              950: '#052e16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #020617; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col selection:bg-brand-500 selection:text-slate-950">
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2"></div>
+
+  <!-- LANDING PAGE VIEW -->
+  <div id="view-landing" class="flex-1 flex flex-col">
+    <!-- Header -->
+    <header class="border-b border-slate-900 bg-slate-950/80 backdrop-blur sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="h-9 w-9 rounded-lg bg-brand-600 flex items-center justify-center font-bold text-slate-950 text-lg">C</div>
+          <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">ComplianceAI</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+          <a href="#features" class="hover:text-white transition">Fitur</a>
+          <a href="#pricing" class="hover:text-white transition">Harga</a>
+          <a href="#faq" class="hover:text-white transition">FAQ</a>
+        </nav>
+        <button onclick="navigateTo('dashboard')" class="bg-brand-600 hover:bg-brand-500 text-slate-950 font-semibold px-4 py-2 rounded-lg text-sm transition shadow-lg shadow-brand-500/10">
+          Masuk Dashboard
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-24 overflow-hidden flex-1 flex items-center">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.08),transparent_45%)]"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-brand-500/10 text-brand-500 border border-brand-500/20">
+            Dibuat untuk Fintech & Startup Indonesia
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+            Otomatisasi Kepatuhan <span class="bg-gradient-to-r from-brand-500 to-emerald-400 bg-clip-text text-transparent">OJK & UU PDP</span>
+          </h1>
+          <p class="text-lg text-slate-400 max-w-lg">
+            Kumpulkan bukti audit cloud secara otomatis, petakan langsung ke pasal regulasi lokal, dan ekspor laporan siap saji dalam Bahasa Indonesia.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="navigateTo('dashboard')" class="bg-brand-600 hover:bg-brand-500 text-slate-950 font-bold px-6 py-3 rounded-lg text-base transition shadow-lg shadow-brand-500/20">
+              Mulai Sekarang (Gratis)
+            </button>
+            <a href="#features" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-semibold px-6 py-3 rounded-lg text-base transition">
+              Pelajari Fitur
+            </a>
+          </div>
+        </div>
+        <div class="relative lg:ml-4">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-emerald-500 rounded-2xl blur opacity-30"></div>
+          <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+              </div>
+              <span class="text-xs text-slate-500 font-mono">compliance_snapshot.json</span>
+            </div>
+            <div class="mt-4 space-y-3 font-mono text-xs text-slate-400">
+              <p><span class="text-brand-500">✔</span> AWS S3 Bucket Encryption: <span class="text-emerald-400">Compliant</span></p>
+              <p><span class="text-brand-500">✔</span> GCP IAM Role Least Privilege: <span class="text-emerald-400">Compliant</span></p>
+              <p><span class="text-amber-500">⚠</span> Database Backup Retention: <span class="text-amber-400">Warning (7 days instead of 14)</span></p>
+              <div class="p-3 bg-slate-950 rounded border border-slate-800 mt-4">
+                <p class="text-slate-500">// Mapped to UU PDP Pasal 24</p>
+                <p class="text-slate-300">"Pengendali Data Pribadi wajib menjaga kerahasiaan..."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 border-t border-slate-900 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <h2 class="text-3xl font-bold">Mengapa ComplianceAI?</h2>
+          <p class="text-slate-400">Solusi terlengkap untuk menyederhanakan proses audit regulasi teknologi finansial di Indonesia.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-6 rounded-xl border border-slate-900 bg-slate-900/30 space-y-4">
+            <div class="w-12 h-12 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold">Pemetaan Otomatis OJK</h3>
+            <p class="text-slate-400 text-sm">Bukti audit langsung dipetakan ke regulasi SEOJK 06/2021 dan POJK terkait sistem manajemen risiko IT.</p>
+          </div>
+          <div class="p-6 rounded-xl border border-slate-900 bg-slate-900/30 space-y-4">
+            <div class="w-12 h-12 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold">Kesiapan UU PDP</h3>
+            <p class="text-slate-400 text-sm">Modul siap pakai untuk memantau perlindungan data pribadi dan hak-hak subjek data sesuai undang-undang terbaru.</p>
+          </div>
+          <div class="p-6 rounded-xl border border-slate-900 bg-slate-900/30 space-y-4">
+            <div class="w-12 h-12 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center">
+              <

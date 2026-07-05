@@ -1,0 +1,8 @@
+name = "complianceai-api"
+main = "index.ts"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "complianceai-db"
+database_id = "ecc6066c-1886-430d-a63a-184337215bcf"

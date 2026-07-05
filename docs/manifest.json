@@ -1,0 +1,52 @@
+[
+  {
+    "path": "src/app/layout.tsx",
+    "purpose": "Root layout: Inter font, dark theme, metadata, GlobalProvider wrapper",
+    "dependencies": []
+  },
+  {
+    "path": "src/app/globals.css",
+    "purpose": "Tailwind directives + CSS custom properties + animations",
+    "dependencies": []
+  },
+  {
+    "path": "src/app/page.tsx",
+    "purpose": "Landing page \u2014 Decide/Learn surface: hero, features, pricing, FAQ, social proof, CTA",
+    "dependencies": []
+  },
+  {
+    "path": "src/app/dashboard/layout.tsx",
+    "purpose": "Dashboard layout: sidebar nav + topbar + main content area. Wraps all dashboard pages with StoreProvider.",
+    "dependencies": []
+  },
+  {
+    "path": "src/app/dashboard/page.tsx",
+    "purpose": "Dashboard home \u2014 Monitor surface: computed stat cards, charts from real data, recent activity feed",
+    "dependencies": []
+  },
+  {
+    "path": "src/app/dashboard/policies/page.tsx",
+    "purpose": "Entity CRUD list \u2014 Operate surface: data table, create/edit/delete, search, sort, filter, bulk actions",
+    "dependencies": []
+  },
+  {
+    "path": "src/app/dashboard/settings/page.tsx",
+    "purpose": "Settings \u2014 Configure surface: profile form, notification toggles, data export/import/reset",
+    "dependencies": []
+  },
+  {
+    "path": "src/lib/store.tsx",
+    "purpose": "React Context + useReducer global state: entities CRUD, seed data, localStorage sync, toast notifications",
+    "dependencies": []
+  },
+  {
+    "path": "src/lib/types.ts",
+    "purpose": "TypeScript interfaces for ALL entities and state shapes",
+    "dependencies": []
+  },
+  {
+    "path": "src/lib/utils.ts",
+    "purpose": "Utilities: formatDate, formatNumber, classNames, generateId, exportJSON, importJSON",
+    "dependencies": []
+  }
+]

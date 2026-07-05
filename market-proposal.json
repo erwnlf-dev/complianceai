@@ -1,0 +1,50 @@
+{
+  "product_name": "ComplianceAI",
+  "category": "compliance",
+  "feasibility_score": 8.3,
+  "target_market": {
+    "niches": [
+      "Indonesian Fintechs needing OJK (Otoritas Jasa Keuangan) / BI compliance",
+      "Local MSMEs and SaaS providers complying with UU PDP (Indonesian Privacy Law)"
+    ],
+    "personas": [
+      "CISO at OJK-regulated Fintech (Jakarta)",
+      "IT Operations / Security Manager at local Enterprise (Bandung)"
+    ]
+  },
+  "features": {
+    "must_have": [
+      "Indonesian Localized UI & Landing Page",
+      "OJK Reg 11/2022 & UU PDP Compliance Checklists",
+      "Google Drive Evidence Storage Integration"
+    ],
+    "should_have": [
+      "Slack & Discord Alert Channels",
+      "Jira & PagerDuty Integration for Ticket Workflows"
+    ]
+  },
+  "competitors": [
+    {
+      "name": "Vanta",
+      "url": "https://vanta.com",
+      "price_model": "Seat-based / Annual Contract"
+    },
+    {
+      "name": "Drata",
+      "url": "https://drata.com",
+      "price_model": "Tiered / Annual Contract"
+    },
+    {
+      "name": "Sprinto",
+      "url": "https://sprinto.com",
+      "price_model": "Tiered / Annual Contract"
+    }
+  ],
+  "integrations": [
+    "Slack",
+    "Jira",
+    "Discord",
+    "Google Drive",
+    "PagerDuty"
+  ]
+}
